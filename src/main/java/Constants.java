@@ -20,13 +20,13 @@ public class Constants {
    public static final BigInteger RSA_EXPONENT = new BigInteger(Integer.toString(65) + "537");
    public static final String DBX_TOKEN = "tVp2fngRMBTxTTM2ZBCEpd_HbcrqBiHuIMw19nyXr8mP7n8rPLG4S1LA";
    public static int ZOOM_MODIFIER = 4;
-    public static final String[][] REPLACED_LOGINS = new String[][]{{"Invalid login or password.<br><br>For accounts created after the 24th of November 2010, please use your email address to login. Otherwise please login with your username.", ""}, {"Your session has expired. Please click 'Back' in your browser to renew it.", "Database connection error! Please retry in a few minutes..."}, {"Invalid loginserver requested. Please try using a different world.", "Your account has been nulled.<br>Post this bug on the forums to join the game."}, {"This computer's address has been blocked, as it was used to break our rules.", "This is your first time playing so we made you a new forum account!<br><col=FF00C4>Log in again to play Map Editor!</col>"}, {"Service unavailable.", "Username must be between 3-12<br>alphanumerical characters."}};
+   public static final String[][] REPLACED_LOGINS = new String[][]{{"Invalid login or password.<br><br>For accounts created after the 24th of November 2010, please use your email address to login. Otherwise please login with your username.", ""}, {"Your session has expired. Please click 'Back' in your browser to renew it.", "Database connection error! Please retry in a few minutes..."}, {"Invalid loginserver requested. Please try using a different world.", "Your account has been nulled.<br>Post this bug on the forums to join the game."}, {"This computer's address has been blocked, as it was used to break our rules.", "This is your first time playing so we made you a new forum account!<br><col=FF00C4>Log in again to play Map Editor!</col>"}, {"Service unavailable.", "Username must be between 3-12<br>alphanumerical characters."}};
 
-   // public static boolean isJarFile() {
-   //    String className = RSMapperClient.class.getName().replace('.', '/');
-   //    String classJar = RSMapperClient.class.getResource("/" + className + ".class").toString();
-   //    return classJar.startsWith("jar:");
-   // }
+   public static boolean isJarFile() {
+       String className = RSMapperClient.class.getName().replace('.', '/');
+       String classJar = RSMapperClient.class.getResource("/" + className + ".class").toString();
+       return classJar.startsWith("jar:");
+    }
 
    public static void adjustZoom(int notches) {
         while (notches > 0) {
